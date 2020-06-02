@@ -1,0 +1,39 @@
+<div class="card my-5">
+  <div class="card-body">
+    <form (ngSubmit)="onSubmit()" #carForm="ngForm">
+      <div class="form-group">
+        <label for="mark">Mark</label>
+        <input type="text" [(ngModel)]="car.mark"
+               class="form-control"
+               id="mark"
+               name="mark"
+               placeholder="Enter your car mark"
+               required #mark="ngModel">
+      </div>
+      <div [hidden]="!mark.pristine" class="alert alert-danger">Mark is required</div>
+      <div class="form-group">
+        <label for="model">Model</label>
+        <input type="text" [(ngModel)]="car.model"
+               class="form-control"
+               id="model"
+               name="model"
+               placeholder="Enter your car model"
+               required #model="ngModel">
+        <div [hidden]="!model.pristine" class="alert alert-danger">model is required</div>
+      </div>
+      <div class="form-group">
+        <label for="color">Color</label>
+        <input type="text" [(ngModel)]="car.color"
+               class="form-control"
+               id="color"
+               name="color"
+               placeholder="Enter your car color"
+               required #color="ngModel">
+        <div [hidden]="!color.pristine" class="alert alert-danger">color is required</div>
+      </div>
+
+      <button type="submit" [disabled]="!carForm.form.valid"
+              class="btn btn-info">Submit</button>
+    </form>
+  </div>
+</div>

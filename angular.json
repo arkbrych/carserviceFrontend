@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angularCarServiceClient"
+    }
+  },
+  "defaultProject": "angularCarServiceClient",
+  "cli": {
+    "analytics": "50a5d3dc-0de9-4044-966f-a7a76b69e6cd"
+  }
 }
